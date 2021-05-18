@@ -67,13 +67,13 @@
                 }
         </style>
         <script>
-                // window.onload = () => {
-                //         console.log('here', window.innerWidth < 700);
-                //         if (window.innerWidth < 700) {
-                //                 return document.getElementById("container-template-message").innerHTML = '<iframe scrolling="no" class="frame-template-message frame" src="C:\Users\admin\OneDrive\Máy tính\test.html" frameborder="0"></iframe>'
-                //         }
-                //         return document.getElementById("container-template-message").innerHTML = '<iframe scrolling="no" class="frame-template-message frame" src="C:\Users\admin\OneDrive\Máy tính\test.html" frameborder="0"></iframe>'
-                // }
+                window.onload = () => {
+                        console.log('here', window.innerWidth < 700);
+                        if (window.innerWidth < 700) {
+                                return document.getElementById("container-template-message").innerHTML = '<iframe scrolling="no" class="frame-template-message frame" src="./test.html" frameborder="0"></iframe>'
+                        }
+                        return document.getElementById("container-template-message").innerHTML = '<iframe scrolling="no" class="frame-template-message frame" src="./boxchat.html" frameborder="0"></iframe>'
+                }
         </script>
         <div class="container-template-message" id="container-template-message">
                 <iframe scrolling="no" class="frame-template-message frame"
