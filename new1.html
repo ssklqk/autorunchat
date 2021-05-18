@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+        <style>
+                .container-template-message {
+                        border-radius: 15px !important;
+                        border: none;
+                        z-index: 9;
+                        width: 350px;
+                        position: fixed;
+                }
+
+                .frame-template-message {
+                        border-radius: 15px !important;
+                        width: 100%;
+                        height: 100%;
+                        padding: 0 auto;
+                        justify-content: center;
+
+
+                }
+
+                @media only screen and (max-width: 700px) {
+                        .container-template-message {
+                                border-radius: 15px !important;
+                                height: 35%;
+                                position: fixed;
+                                margin: 0 auto;
+                                position: absolute;
+                                width: 90%;
+                                background-color: rgba(178, 217, 196, 0.5);
+                                bottom: 10px;
+                                right: 25%;
+                                left: 50%;
+                                margin-left: -45%;
+                        }
+                }
+
+                @media only screen and (min-width: 768px) {
+                        .container-template-message {
+                                border-radius: 15px !important;
+                                height: 454px;
+                                bottom: 10px;
+                                right: 15px;
+                                padding: 10px;
+                                background-color: rgba(178, 217, 196, 0.5);
+                        }
+                }
+
+                .container {
+                        width: 100%;
+                        padding-right: 15px;
+                        padding-left: 15px;
+                        margin-right: auto;
+                        margin-left: auto;
+                        background-color: rgba(178, 217, 196, 0.5);
+
+                }
+        </style>
+        <script>
+                // window.onload = () => {
+                //         console.log('here', window.innerWidth < 700);
+                //         if (window.innerWidth < 700) {
+                //                 return document.getElementById("container-template-message").innerHTML = '<iframe scrolling="no" class="frame-template-message frame" src="C:\Users\admin\OneDrive\Máy tính\test.html" frameborder="0"></iframe>'
+                //         }
+                //         return document.getElementById("container-template-message").innerHTML = '<iframe scrolling="no" class="frame-template-message frame" src="C:\Users\admin\OneDrive\Máy tính\test.html" frameborder="0"></iframe>'
+                // }
+        </script>
+        <div class="container-template-message" id="container-template-message">
+                <iframe scrolling="no" class="frame-template-message frame"
+                        src="C:\Users\admin\OneDrive\Máy tính\boxchat.html" frameborder="0"></iframe>
+        </div>
+
+
+</body>
+
+</html>
