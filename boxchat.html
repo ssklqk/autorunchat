@@ -161,8 +161,9 @@
                 message: ' 0387510788  Tư Vấn Miễn Phí cho em'
             }
         ]
+        const size = 7
         window.onload = () => {
-                return loadMessage(8)
+                return loadMessage(size)
         }
 
         const returnView = (number) => {
@@ -182,9 +183,8 @@
 
         const loading = () => {
             let count = 0;
-            let next = 8;
+            let next = size;
             let isFirstime = true;
-                next = 8;
             setInterval(() => {
                 const newMessage = `<div id="div${next}" class="title">
                             <a href="#" id="${next}" class="next sender-name text-dark">${data[next].senderName} :</a>
