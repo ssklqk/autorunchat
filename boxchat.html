@@ -193,7 +193,7 @@
                     $("#box-chat-template").append(newMessage)
                 let nextHeight = 0;
                     nextHeight = $(`#div${next}`).height();
-                $('html,body').animate({ scrollTop: nextHeight }, {
+                $('html,body').animate({ scrollTop: nextHeight + 10 }, {
                     duration: 1000
                 });
                 $(`#div${count}`).hide('slow', () => {
