@@ -163,7 +163,9 @@
         ]
         const size = 7
         window.onload = () => {
-                return loadMessage(size)
+            size = window.screen.width  < 700 ? 6 : 7;
+            loadMessage(size);
+            loading();
         }
 
         const returnView = (number) => {
