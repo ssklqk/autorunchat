@@ -12,7 +12,6 @@
             margin: 0 auto;
             padding: 10px;
             width: 100%;
-            /* background-color: rgba(178, 217, 196, 0.5); */
             border-radius: 15px;
             overflow: auto;
             border-radius: 15px !important;
@@ -33,7 +32,7 @@
         }
 
         .title {
-            margin-top : 8px;
+            margin-top: 8px;
             border-radius: 15px !important;
         }
     </style>
@@ -49,7 +48,7 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 </head>
@@ -161,7 +160,7 @@
                 message: ' 0387510788  Tư Vấn Miễn Phí cho em'
             }
         ]
-        const size = 7
+        var  size = 7;
         window.onload = () => {
             size = window.screen.width  < 700 ? 6 : 7;
             loadMessage(size);
@@ -186,16 +185,17 @@
         const loading = () => {
             let count = 0;
             let next = size;
+            console.log("size in loading",size);
             let isFirstime = true;
             setInterval(() => {
                 const newMessage = `<div id="div${next}" class="title">
                             <a href="#" id="${next}" class="next sender-name text-dark">${data[next].senderName} :</a>
                             <span>${data[next].message}</span>
                             </div>`
-                    $("#box-chat-template").append(newMessage)
+                $("#box-chat-template").append(newMessage)
                 let nextHeight = 0;
-                    nextHeight = $(`#div${next}`).height();
-                $('html,body').animate({ scrollTop: nextHeight + 10 }, {
+                nextHeight = $(`#div${next}`).height();
+                $('html,body').animate({ scrollTop: nextHeight }, {
                     duration: 1000
                 });
                 $(`#div${count}`).hide('slow', () => {
@@ -208,12 +208,10 @@
                     if (count === data.length) {
                         count = 0;
                     }
-
                 })
                 clearInterval();
             }, 2000)
         }
-        loading()
     </script>
 </body>
 
